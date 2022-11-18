@@ -14,7 +14,7 @@ print(f"Tasks ended in {round(end - start, 2)} second(s)")'''
 
 if __name__ == '__main__':
     T = []
-    for i in range(1):
+    for i in range(10):
         T.append(threading.Thread(target=task, args=[i]))
     for i in range(len(T)):
         T[i].start()

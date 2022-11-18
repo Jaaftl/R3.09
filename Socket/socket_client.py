@@ -7,8 +7,12 @@ def client():
 
     client_socket = socket.socket()  # initation
     print ("connexion...")
-    client_socket.connect((host, port))  # connexion au serveur
-    print ("connecté au serveur")
+
+    try:
+        client_socket.connect((host, port))  # connexion au serveur
+        print ("connecté au serveur")
+    except :
+        print("Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée")
 
     message = ''  # message
 
