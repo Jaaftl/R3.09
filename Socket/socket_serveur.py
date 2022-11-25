@@ -1,13 +1,6 @@
 import socket
 import time
 
-
-def connect(a):
-    a.listen(2)
-    conn, address = a.accept()
-    print("connexion depuis" + str(address))
-
-
 def serveur():
     host = socket.gethostname()
     port = 10000
