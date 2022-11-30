@@ -2,6 +2,7 @@ import time
 import concurrent.futures
 import requests
 import threading
+import multiprocessing
 
 img_urls = [
     'https://cdn.pixabay.com/photo/2019/10/05/19/40/pumpkins-4528653__340.jpg',
@@ -33,4 +34,4 @@ if __name__ == '__main__':
     with concurrent.futures.ThreadPoolExecutor() as executor:
         executor.map(download_image, img_urls)
     end = time.perf_counter()
-    print(f"Tasks ended in {round(end - start, 2)} second(s)")
+    print(f"Tasks pool thread ended in {round(end - start, 2)} second(s)")
